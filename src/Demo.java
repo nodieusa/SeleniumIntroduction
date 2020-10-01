@@ -1,19 +1,18 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Demo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		System.setProperty("webdriver.chrome.driver", "//usr//local//bin//chromedriver");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--whitelisted-ips 172.217.9.46");
-		WebDriver driver = new ChromeDriver (options);
-	
+		System.setProperty("webdriver.chrome.driver", "c:\\Windows\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		String url = "http://www.google.com";
+//		String url = "chrome://version";
+		driver.get(url);
 		System.out.println(driver.getTitle());
-		driver.get("https://google.com");
-	
-		
+		System.out.println("original url: " + url + " current url: " + driver.getCurrentUrl());
+		driver.close();
 	}
 }
