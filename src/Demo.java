@@ -13,6 +13,6 @@ public class Demo {
 		driver.get(url);
 		System.out.println(driver.getTitle());
 		System.out.println("original url: " + url + " current url: " + driver.getCurrentUrl());
-		driver.close();
+		driver.close(); 
 	}
 }
