@@ -19,7 +19,7 @@ public class Dropdown {
 		Select s = new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
 		s.selectByValue("USD");
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }
