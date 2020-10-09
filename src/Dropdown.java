@@ -11,7 +11,8 @@ public class Dropdown {
 		System.setProperty("webdriver.chrome.driver", "c:\\Windows\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://spicejet.com/");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
+/*		
 		driver.findElement(By.cssSelector("#divpaxinfo")).click();
 		Thread.sleep(2000);
 		Select sAdults = new Select(driver.findElement(By.cssSelector("#ctl00_mainContent_ddl_Adult")));
@@ -24,6 +25,10 @@ public class Dropdown {
 		
 		Select s = new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
 		s.selectByValue("USD");
+*/
+		driver.findElement(By.cssSelector("#ctl00_mainContent_rbtnl_Trip_1")).click();
+		Thread.sleep(2000);
+		Assert.assertTrue(driver.findElement(By.cssSelector("#ctl00_mainContent_view_date2")).isEnabled());
 		Thread.sleep(3000);
 		driver.quit();
 	}
