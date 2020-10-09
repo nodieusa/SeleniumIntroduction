@@ -80,5 +80,6 @@
 	<classpathentry kind="lib" path="C:/Users/759602/Downloads/selenium-java-4.0.0-alpha-6/lib/reactor-core-3.3.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/759602/Downloads/selenium-java-4.0.0-alpha-6/lib/reactor-netty-0.9.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/Users/759602/Downloads/selenium-java-4.0.0-alpha-6/lib/slf4j-api-1.7.30.jar"/>
+	<classpathentry kind="lib" path="C:/Users/759602/Downloads/testng-7.3.0 (1).jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
