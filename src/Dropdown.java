@@ -12,7 +12,14 @@ public class Dropdown {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://spicejet.com/");
 		Thread.sleep(2000);
-/*		
+//		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1")).click();
+		Select sDeparture = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_originStation1")));
+		sDeparture.selectByValue("BLR");
+		Thread.sleep(2000);
+		driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1")).click();
+		driver.findElement(By.xpath("//div[@id='ctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
+		
+		
 		driver.findElement(By.cssSelector("#divpaxinfo")).click();
 		Thread.sleep(2000);
 		Select sAdults = new Select(driver.findElement(By.cssSelector("#ctl00_mainContent_ddl_Adult")));
@@ -25,7 +32,6 @@ public class Dropdown {
 		
 		Select s = new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
 		s.selectByValue("USD");
-*/
 		driver.findElement(By.cssSelector("#ctl00_mainContent_rbtnl_Trip_1")).click();
 		Thread.sleep(2000);
 		Assert.assertTrue(driver.findElement(By.cssSelector("#ctl00_mainContent_view_date2")).isEnabled());
